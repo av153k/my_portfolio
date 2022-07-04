@@ -27,7 +27,7 @@ class MyApp extends HookConsumerWidget {
       return null;
     }, []);
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Abhishek Anand',
       debugShowCheckedModeBanner: false,
       themeMode: config.themeMode,
       theme: AppConstants.themes.lightThemeData,

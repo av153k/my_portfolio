@@ -6,6 +6,7 @@ class AppThemes {
     primarySwatch: AppColors.primaryColorDark,
     primaryColor: AppColors.primaryColorDark,
     scaffoldBackgroundColor: AppColors.primaryColorDark,
+    shadowColor: AppColors.shadowColorDark,
     textTheme: TextTheme(
       displayLarge: TextStyle(
         fontSize: AppSize.getTextSize(57),
@@ -89,6 +90,7 @@ class AppThemes {
     primarySwatch: AppColors.primaryColorLight,
     primaryColor: AppColors.primaryColorLight,
     scaffoldBackgroundColor: AppColors.primaryColorLight,
+    shadowColor: AppColors.shadowColorLight,
     textTheme: TextTheme(
       displayLarge: TextStyle(
         fontSize: AppSize.getTextSize(57),

@@ -6,11 +6,13 @@ class AppColors {
   static const Color secondaryColorDark = Color(0xff393E46);
   static const Color tertiaryColorDark = Color(0xff4ECCA3);
   static const Color textColorDark = Color(0xffEEEEEE);
+  static const Color shadowColorDark = Color(0xff1e232a);
   static MaterialColor primaryColorLight =
       getMaterialColor(const Color(0xffFCF8EC));
   static const Color secondaryColorLight = Color(0xffD0E8F2);
   static const Color tertiaryColorLight = Color(0xff79A3B1);
   static const Color textColorLight = Color(0xff456268);
+  static const Color shadowColorLight = Color(0xffd6d3c9);
 
   static final Map<int, Color> _colorCodes = {
     50: const Color.fromRGBO(147, 205, 72, .1),

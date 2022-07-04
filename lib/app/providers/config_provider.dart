@@ -10,24 +10,33 @@ final configProvider =
 class ConfigProvider extends ChangeNotifier {
   ThemeMode themeMode = ThemeMode.dark;
 
-  toggleThemeMode(ThemeMode mode) {
-    AppUtils.logger.d('toggleThemeMode: $mode');
-    themeMode = mode;
+  toggleThemeMode() {
+    AppUtils.logger.d('toggleThemeMode: current themeMode $themeMode');
+    if (themeMode == ThemeMode.dark) {
+      themeMode = ThemeMode.light;
+    } else {
+      themeMode = ThemeMode.dark;
+    }
     notifyListeners();
     SharedPrefsService.instance.setString(
-        SharedPrefsKeys.themeMode, mode == ThemeMode.dark ? 'dark' : 'light');
+        SharedPrefsKeys.themeMode, themeMode == ThemeMode.dark ? 'dark' : 'light');
   }
 
   void setThemeAccToSystem() {
     String? cachedMode =
         SharedPrefsService.instance.getString(SharedPrefsKeys.themeMode);
+    ThemeMode themeModeD = ThemeMode.light;
     if (cachedMode == null) {
-      toggleThemeMode(cachedMode == 'dark' ? ThemeMode.dark : ThemeMode.light);
+      themeModeD = cachedMode == 'dark' ? ThemeMode.dark : ThemeMode.light;
     } else {
-      toggleThemeMode(
+      themeModeD =
           SchedulerBinding.instance.window.platformBrightness == Brightness.dark
               ? ThemeMode.dark
-              : ThemeMode.light);
+              : ThemeMode.light;
+    }
+
+    if (themeModeD != themeMode) {
+      toggleThemeMode();
     }
   }
 }
