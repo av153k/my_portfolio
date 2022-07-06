@@ -38,7 +38,7 @@ class HomeView extends HookConsumerWidget {
                 child: Text(
                   'Hi, I am Abhishek Anand \u{1f44b}',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.titleLarge,
+                  style: Theme.of(context).textTheme.headlineLarge,
                 ),
               ),
             ),
